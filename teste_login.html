@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<style>
+    body {
+     background-color: black;
+     color:white ;
+    }
+</style>
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var loginCadastrado = "teste";
+    var senhaCadastrada = "teste123";
+
+    var tentativas = 1;
+    var acesso = "login";
+   
+   while(tentativas <= 3)
+   {
+    console.log(tentativas);
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+   
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+        alert("Bem-vindo ao sistema " + loginInformado);
+        
+    } else {
+
+        alert("Login inválido. Tente novamente");
+        tentativas = tentativas + 1;
+    }
+    
+   }
+
+   if(tentativas == 4)
+     {
+         mostra("Usuario bloqueado, aguarde para tentar novamente!")
+     }
+</script>
